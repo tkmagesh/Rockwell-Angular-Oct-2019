@@ -29,7 +29,8 @@
         });
 
         $(function(){
-            $('#btnCalculate').click(function(){
+            $('#btnCalculate').click(function(evt){
+                console.dir(evt);
                 var basic = $('#txtBasic').toInt(),
                     hra = $('#txtHra').toInt(),
                     da = $('#txtDa').toInt(),
