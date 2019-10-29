@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class GreeterComponent{
     greetMessage = 'A dummy message';
+
+    onClearButtonClick(){
+        this.greetMessage='';
+    }
+
+    onGreetButtonClick(userName : string){
+        this.greetMessage = `Hi ${userName}, Have a nice day!`;
+    }
 }
