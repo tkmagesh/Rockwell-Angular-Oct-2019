@@ -31,16 +31,13 @@ export class BugTrackerComponent{
         this.bugsList = [...this.bugsList, newBug];
     }
 
-    onBugNameClick(bug : Bug){
-        this.bugOperationsService.toggle(bug);
+    onBugNameClick(bugToToggle : Bug){
+        let toggledBug = this.bugOperationsService.toggle(bugToToggle);
+        this.bugsList = this.bugsList.map(bug => bug === bugToToggle ? toggledBug : bug);
     }
 
     onRemoveClosedClick(){
         this.bugsList = this.bugsList.filter(bug => !bug.isClosed);
     }
 
-    getClosedCount(){
-        return this.bugsList.reduce((result, bug) => bug.isClosed ? ++result : result, 0);
-    }
-    
 }
