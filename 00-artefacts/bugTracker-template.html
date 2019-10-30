@@ -12,8 +12,26 @@
         (done) 4. Remove closed bugs
         (done) 5. Display stats ( # of closed bugs / total # of bugs )
         (done) 6. Improvise the bug display
-        7. Sort the bugs
+        (done) 7. Sort the bugs
         8. Persist the bugs in the localStorage
+            window.localStorage
+            ===================
+            * key value store
+            * key has to be unique
+                (introduce an 'id' attribute to the bug)
+            * both key and value must be strings
+                (use JSON.stringify & JSON.parse for serialization and deserialization)
+            * Same Origin Policy
+            * ~10MB storage limit
+            * APIs
+            ======
+                - setItem(key, value)
+                - getItem(key) => value
+                - removeItem(key)
+                - clear()
+                - key(index) => key at index
+                - length
+
         9. Display 'createdAt' for each bug
         10. Persist the bugs in the server
         11. Make the bugs accessible using unique urls (routing)

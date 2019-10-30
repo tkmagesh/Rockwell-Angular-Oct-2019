@@ -20,10 +20,10 @@ export class BugTrackerComponent{
     */
 
     constructor(private bugOperationsService: BugOperationsService) {
-        this.bugsList.push({name : 'Server communication failure', isClosed : true});
+        /* this.bugsList.push({name : 'Server communication failure', isClosed : true});
         this.bugsList.push({ name: 'Data integrity checks failed', isClosed: false });
         this.bugsList.push({ name: 'User actions not recognized', isClosed: false });
-        this.bugsList.push({ name: 'Application not responding', isClosed: true });
+        this.bugsList.push({ name: 'Application not responding', isClosed: true }); */
     }
     
     onAddNewClick(){
