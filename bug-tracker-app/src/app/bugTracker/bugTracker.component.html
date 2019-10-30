@@ -1,5 +1,5 @@
 <section class="stats">
-    <span class="closed">1</span>
+    <span class="closed">{{getClosedCount()}}</span>
     <span> / </span>
     <span>{{bugsList.length}}</span>
 </section>
@@ -20,7 +20,11 @@
 <section class="list">
     <ol>
         <li *ngFor="let bug of bugsList">
-            <span class="bugname" (click)="onBugNameClick(bug)">
+            <span 
+                class="bugname" 
+                (click)="onBugNameClick(bug)"
+                [ngClass]="{closed : bug.isClosed}"
+            >
                 {{bug | json}}
             </span>
             <div class="datetime">[Created At]</div>

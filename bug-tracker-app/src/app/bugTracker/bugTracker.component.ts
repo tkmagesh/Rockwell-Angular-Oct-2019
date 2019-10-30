@@ -23,5 +23,9 @@ export class BugTrackerComponent{
     onRemoveClosedClick(){
         this.bugsList = this.bugsList.filter(bug => !bug.isClosed);
     }
+
+    getClosedCount(){
+        return this.bugsList.reduce((result, bug) => bug.isClosed ? ++result : result, 0);
+    }
     
 }
