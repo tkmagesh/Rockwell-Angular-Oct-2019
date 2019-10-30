@@ -6,11 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first-app';
-
-  constructor(){
-    setTimeout(() => {
-       this.title = 'My New App';
-    }, 10000);
-  }
+  userChoice = '';
+  availableChoices = ['Products', 'Calculator', 'Greeter'];
 }

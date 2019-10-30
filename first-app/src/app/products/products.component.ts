@@ -5,5 +5,9 @@ import { Component } from '@angular/core';
     templateUrl : 'products.component.html'
 })
 export class ProductsComponent{
-    productsList : string[] = [ 'Pen', 'Pencil', 'Marker', 'Scribble Pad' ];
+    productsList : string[] = [ ];
+
+    onAddNewClick(newProductName : string){
+        this.productsList.push(newProductName);
+    }
 }

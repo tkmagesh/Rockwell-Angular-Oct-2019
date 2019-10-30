@@ -22,11 +22,7 @@ import { ProductsComponent } from './products/products.component';
   ],
   providers: [],
   bootstrap: [
-    AppComponent, 
-    GreeterComponent, 
-    CalculatorOneComponent, 
-    CalculatorTwoComponent,
-    ProductsComponent
+    AppComponent    
   ]
 })
 export class AppModule { }

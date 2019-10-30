@@ -1,8 +1,9 @@
 <h1>Products</h1>
 <hr>
 <label for="">Product Name : </label>
-<input type="text" name="" id="">
-<input type="button" value="Add New">
+<input type="text" #txtProductName>
+<input type="button" value="Add New" (click)="onAddNewClick(txtProductName.value)">
+<div><span>Products Count : {{productsList.length}}</span></div>
 <ol>
     <li *ngFor="let product of productsList">{{product}}</li>
 </ol>
