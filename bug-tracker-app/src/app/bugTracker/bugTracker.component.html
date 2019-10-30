@@ -20,7 +20,7 @@
 <section class="list">
     <ol>
         <li *ngFor="let bug of bugsList">
-            <span class="bugname">{{bug}}</span>
+            <span class="bugname">{{bug | json}}</span>
             <div class="datetime">[Created At]</div>
         </li>
     </ol>

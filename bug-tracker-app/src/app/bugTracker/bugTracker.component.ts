@@ -1,14 +1,19 @@
 import { Component } from '@angular/core';
+import { Bug } from './models/Bug';
 
 @Component({
     selector : 'app-bug-tracker',
     templateUrl : 'bugTracker.component.html'
 })
 export class BugTrackerComponent{
-    bugsList : string[] = [];
+    bugsList : Bug[] = [];
 
     onAddNewClick(newBugName : string){
-        this.bugsList.push(newBugName);
+        let newBug : Bug = {
+            name : newBugName,
+            isClosed : false
+        };
+        this.bugsList.push(newBug);
     }
     
 }
