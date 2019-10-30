@@ -10,7 +10,7 @@ export class BugTrackerComponent{
     bugsList : Bug[] = [];
     bugSortBy : string = 'name';
     bugSortDesc : boolean = false;
-
+    newBugName : string = '';
     /* 
     bugOperationsService : BugOperationsService;
 
@@ -26,9 +26,9 @@ export class BugTrackerComponent{
         this.bugsList.push({ name: 'Application not responding', isClosed: true });
     }
     
-    onAddNewClick(newBugName : string){
-        let newBug = this.bugOperationsService.createNew(newBugName);
-        this.bugsList.push(newBug);
+    onAddNewClick(){
+        let newBug = this.bugOperationsService.createNew(this.newBugName);
+        this.bugsList = [...this.bugsList, newBug];
     }
 
     onBugNameClick(bug : Bug){
