@@ -1,16 +1,28 @@
 import { Bug } from '../models/Bug';
+import { BugStorageService } from './bugStorage.service';
 
 export class BugOperationsService{
+    constructor(private bugStorage : BugStorageService){
+
+    }
+    getAll() : Bug[] {
+        return this.bugStorage.getAll();
+    }
     createNew(newBugName : string):Bug{
-        let newBug: Bug = {
+        let newBugData: Bug = {
+            id : 0,
             name: newBugName,
-            isClosed: false
+            isClosed: false,
+            createdAt : new Date()
         };
-        return newBug;
+        return this.bugStorage.save(newBugData);
     }
 
     toggle(bugToToggle : Bug):Bug{
         let toggledBug = { ...bugToToggle, isClosed : !bugToToggle.isClosed};
-        return toggledBug;
+        return this.bugStorage.save(toggledBug);
+    }
+    remove(bug : Bug) : void {
+        this.bugStorage.remove(bug);
     }
 }
