@@ -1,0 +1,34 @@
+{
+  "bugs": [
+    {
+      "id": 1,
+      "name": "unable to debug",
+      "isClosed": false,
+      "createdAt": "2019-04-17T10:09:07.973Z"
+    },
+    {
+      "id": 2,
+      "name": "Router is not routing",
+      "isClosed": false,
+      "createdAt": "2019-04-17T10:28:33.169Z",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur aliquam id pariatur ipsa expedita nesciunt doloribus facilis architecto quisquam totam veniam odio, minima, labore deleniti, neque nam quia amet eveniet."
+    },
+    {
+      "id": 3,
+      "name": "Socket server is not working",
+      "isClosed": false,
+      "createdAt": "2019-04-17T10:32:18.723Z",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur aliquam id pariatur ipsa expedita nesciunt doloribus facilis architecto quisquam totam veniam odio, minima, labore deleniti, neque nam quia amet eveniet."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Bug Tracker"
+    },
+    {
+      "id": 2,
+      "name": "Payroll Master"
+    }
+  ]
+}
