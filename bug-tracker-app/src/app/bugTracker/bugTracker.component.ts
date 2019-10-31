@@ -10,7 +10,7 @@ export class BugTrackerComponent implements OnInit{
     bugsList : Bug[] = [];
     bugSortBy : string = 'name';
     bugSortDesc : boolean = false;
-    newBugName : string = '';
+    
     /* 
     bugOperationsService : BugOperationsService;
 
@@ -27,8 +27,7 @@ export class BugTrackerComponent implements OnInit{
         
     }
     
-    onAddNewClick(){
-        let newBug = this.bugOperationsService.createNew(this.newBugName);
+    onNewBugAdded(newBug : Bug){
         this.bugsList = [...this.bugsList, newBug];
     }
 
