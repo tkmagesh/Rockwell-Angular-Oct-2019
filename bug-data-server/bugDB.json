@@ -1,12 +1,6 @@
 {
   "bugs": [
     {
-      "id": 1,
-      "name": "unable to debug",
-      "isClosed": false,
-      "createdAt": "2019-04-17T10:09:07.973Z"
-    },
-    {
       "id": 2,
       "name": "Router is not routing",
       "isClosed": false,
