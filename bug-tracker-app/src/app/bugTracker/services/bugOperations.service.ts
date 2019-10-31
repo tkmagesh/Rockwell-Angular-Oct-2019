@@ -1,6 +1,8 @@
 import { Bug } from '../models/Bug';
 import { BugStorageService } from './bugStorage.service';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class BugOperationsService{
     constructor(private bugStorage : BugStorageService){
 

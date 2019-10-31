@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Bug } from './models/Bug';
 import { BugOperationsService } from './services/bugOperations.service';
 
@@ -6,7 +6,7 @@ import { BugOperationsService } from './services/bugOperations.service';
     selector : 'app-bug-tracker',
     templateUrl : 'bugTracker.component.html'
 })
-export class BugTrackerComponent{
+export class BugTrackerComponent implements OnInit{
     bugsList : Bug[] = [];
     bugSortBy : string = 'name';
     bugSortDesc : boolean = false;
@@ -19,11 +19,12 @@ export class BugTrackerComponent{
     } 
     */
 
+    ngOnInit(){
+        this.bugsList = this.bugOperationsService.getAll();
+    }
+    
     constructor(private bugOperationsService: BugOperationsService) {
-        /* this.bugsList.push({name : 'Server communication failure', isClosed : true});
-        this.bugsList.push({ name: 'Data integrity checks failed', isClosed: false });
-        this.bugsList.push({ name: 'User actions not recognized', isClosed: false });
-        this.bugsList.push({ name: 'Application not responding', isClosed: true }); */
+        
     }
     
     onAddNewClick(){
